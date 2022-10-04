@@ -372,9 +372,10 @@ class Git {
 				this.workingDir
 			)
 		}
-		if (IS_INSTALLATION_TOKEN) {
-			return await this.createGithubVerifiedCommits()
-		}
+		// Use git cli for push
+		// if (IS_INSTALLATION_TOKEN) {
+		// 	return await this.createGithubVerifiedCommits()
+		// }
 		return execCmd(
 			`git push ${ this.gitUrl } --force`,
 			this.workingDir
